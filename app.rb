@@ -4,7 +4,12 @@ require 'json'
 enable :sessions
 
 def client
-  OAuth2::Client.new("9c3664f8de6132b35fb22c9dda2c6017602c815a3fd4c07ba7db402597b806dd", "ec7682e7da35625dbd3d01f0a05f41994a1d17794c03de93cae355b66020b38c", :site => "http://localhost:3000")
+  OAuth2::Client.new("b175b563f47a764f86a201d7f7add1d0a1034a6c38d0c3f34c4906db689b77cb", "e48561c1aa6dbb3479a84f35abf6bd8085ca4e21fecc85e94c45babbd20d95b4", :site => "http://staging.qisc.us")
+end
+
+get "/" do
+  content_type :json
+  { :key1 => 'value1', :key2 => 'value2' }.to_json
 end
 
 get "/auth/test" do
