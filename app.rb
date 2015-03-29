@@ -9,7 +9,7 @@ end
 
 get "/" do
   content_type :json
-  { :key1 => 'value1', :key2 => 'value2' }.to_json
+  { :key => 'value' }.to_json
 end
 
 get "/auth/test" do
