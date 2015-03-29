@@ -35,7 +35,7 @@ end
 def get_response(url)
   access_token = OAuth2::AccessToken.new(client, session[:access_token])
   p access_token
-  JSON.parse(access_token.get("/api/v2/mobile/rooms_only").body).first
+  JSON.parse(access_token.get("/api/v2/mobile/rooms_only").body)
 end
 
 
